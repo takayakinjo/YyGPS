@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="320px"
+    android:layout_height="320px">
+
+  <TextView
+      android:id="@+id/message"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:background="#FFFFFF"
+      android:text="Hello Ryuto"
+      />
+  
+  <ScrollView
+      android:id="@+id/scrollView"
+      android:layout_width ="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1"
+      android:background="#808080"
+      >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+      <Button
+          android:id="@+id/sentence"
+          android:layout_width="320px"
+          android:layout_height="48px"
+          android:padding="0px"
+	  android:text="プリセット" />
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout0"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button01"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="あ" />
+        <Button
+            android:id="@+id/button02"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="い" />
+        <Button
+            android:id="@+id/button03"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="う" />
+        <Button
+            android:id="@+id/button04"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="え" />
+        <Button
+            android:id="@+id/button05"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="お" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="か" />
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="き" />
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="く" />
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="け" />
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="こ" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="さ" />
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="し" />
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="す" />
+        <Button
+            android:id="@+id/button24"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="せ" />
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="そ" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="た" />
+        <Button
+            android:id="@+id/button32"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ち" />
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="つ" />
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="て" />
+        <Button
+            android:id="@+id/button35"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="と" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button41"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="な" />
+        <Button
+            android:id="@+id/button42"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="に" />
+        <Button
+            android:id="@+id/button43"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ぬ" />
+        <Button
+            android:id="@+id/button44"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ね" />
+        <Button
+            android:id="@+id/button45"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="の" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button51"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="は" />
+        <Button
+            android:id="@+id/button52"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ひ" />
+        <Button
+            android:id="@+id/button53"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ふ" />
+        <Button
+            android:id="@+id/button54"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="へ" />
+        <Button
+            android:id="@+id/button55"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ほ" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button61"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ま" />
+        <Button
+            android:id="@+id/button62"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="み" />
+        <Button
+            android:id="@+id/button63"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="む" />
+        <Button
+            android:id="@+id/button64"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="め" />
+        <Button
+            android:id="@+id/button65"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="も" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button71"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="や" />
+        <Button
+            android:id="@+id/button72"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ゆ" />
+        <Button
+            android:id="@+id/button73"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="よ" />
+        <Button
+            android:id="@+id/button74"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="　" />
+        <Button
+            android:id="@+id/button75"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="　" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button81"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ら" />
+        <Button
+            android:id="@+id/button82"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="り" />
+        <Button
+            android:id="@+id/button83"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="る" />
+        <Button
+            android:id="@+id/button84"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="れ" />
+        <Button
+            android:id="@+id/button85"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ろ" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button91"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="わ" />
+        <Button
+            android:id="@+id/button92"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="を" />
+        <Button
+            android:id="@+id/button93"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="ん" />
+        <Button
+            android:id="@+id/button94"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="？" />
+        <Button
+            android:id="@+id/button95"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="！" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button101"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="1" />
+        <Button
+            android:id="@+id/button102"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="2" />
+        <Button
+            android:id="@+id/button103"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="3" />
+        <Button
+            android:id="@+id/button104"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="4" />
+        <Button
+            android:id="@+id/button105"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="5" />
+	
+      </LinearLayout>
+      
+      <LinearLayout
+	  android:id="@+id/linearLayout1"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal" >
+	
+        <Button
+            android:id="@+id/button111"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="6" />
+        <Button
+            android:id="@+id/button112"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="7" />
+        <Button
+            android:id="@+id/button113"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="8" />
+        <Button
+            android:id="@+id/button114"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="9" />
+        <Button
+            android:id="@+id/button115"
+            android:layout_width="64px"
+            android:layout_height="48px"
+            android:padding="0px"
+	    android:text="0" />
+	
+      </LinearLayout>
+      
+    </LinearLayout>
+    
+  </ScrollView>
+
+  <LinearLayout
+      android:id="@+id/linearLayout0"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="#808080" >
+    
+    <Button
+        android:id="@+id/spc"
+        android:layout_width="64px"
+        android:layout_height="48px"
+        android:padding="0px"
+	android:text="＿"
+	/>
+    
+    <Button
+        android:id="@+id/bs"
+        android:layout_width="64px"
+        android:layout_height="48px"
+        android:padding="0px"
+	android:text="←"
+	/>
+    
+    <Button
+        android:id="@+id/next"
+        android:layout_width="64px"
+        android:layout_height="48px"
+        android:padding="0px"
+	android:text="小°"
+	/>
+    
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="128px"
+        android:layout_height="48px"
+        android:padding="0px"
+	android:text="OK"
+	/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

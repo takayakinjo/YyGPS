@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.macchinito.rtgps"
+      android:versionCode="1"
+      android:versionName="1.0">
+  
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL"/>
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+  <permission 
+      android:name="com.macchinito.rtgps.permission.C2D_MESSAGE" 
+      android:protectionLevel="signature" />
+  <uses-permission android:name="com.macchinito.rtgps.permission.C2D_MESSAGE" />
+  <!--
+  <uses-permission android:name="com.macchinito.rtgps.c2dm.permission.RECEIVE" />
+  -->
+  
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-feature android:name="android.hardware.camera" />
+  <uses-feature android:name="android.hardware.camera.flash" />
+  
+  <application android:label="@string/app_name" 
+	       android:icon="@drawable/ic_launcher">
+    
+    <meta-data
+       android:name="com.google.android.gms.version"
+       android:value="@integer/google_play_services_version" />
+    <activity android:name="MainActivity"
+              android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+	<category android:name="android.intent.category.LAUNCHER" />
+	<category android:name="android.intent.category.DEFAULT" />
+	<category android:name="android.intent.category.HOME" />
+      </intent-filter>
+    </activity>
+
+    <activity android:name="WebViewActivity"
+              android:label="@string/app_name">
+    </activity>
+
+    <activity
+        android:name="passenterActivity"
+        android:label="@string/app_name">
+    </activity>
+
+    <!-- Get location command intent --> 
+
+    <receiver
+        android:name="com.macchinito.rtgps.GcmBroadcastReceiver"
+        android:permission="com.google.android.c2dm.permission.SEND" >
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+	<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="com.macchinito.rtgps" />
+      </intent-filter>
+    </receiver>
+
+<!--
+    <receiver
+        android:name="com.google.android.gms.gcm.GcmReceiver"
+        android:exported="true"
+        android:permission="com.google.android.c2dm.permission.SEND" >
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+	<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="com.macchinito.rtgps" />
+      </intent-filter>
+    </receiver>
+-->
+
+<!--
+    <receiver android:name="com.macchinito.rtgps.GmailReceiver" >
+      <intent-filter>
+	<action android:name="com.android.mail.action.update_notification" />
+	<data android:mimeType="application/gmail-ls" />
+      </intent-filter>
+    </receiver>
+-->
+
+    <receiver android:name="com.macchinito.rtgps.StartupReceiver">
+      <intent-filter>
+	<action android:name="android.intent.action.BOOT_COMPLETED"/>
+      </intent-filter>
+    </receiver>
+
+    <!-- may not be used -->
+    <receiver android:name="com.macchinito.rtgps.GmailReceiver" >
+      <intent-filter>
+	<action android:name="getLoc" />
+      </intent-filter>
+    </receiver>
+
+    <receiver android:name="com.macchinito.rtgps.ContModeReceiver" >
+      <intent-filter>
+	<action android:name="contMode" />
+      </intent-filter>
+    </receiver>
+
+    <receiver android:name="com.macchinito.rtgps.StartReceiver" >
+      <intent-filter>
+	<action android:name="startLoc" />
+      </intent-filter>
+    </receiver>
+    <!-- may not be used -->
+
+    <service android:name="com.macchinito.rtgps.LocationService" />
+    <service android:name="com.macchinito.rtgps.FuseLocationService" />
+
+    <service android:name="com.macchinito.rtgps.SendMailService" />
+    <service android:name="com.macchinito.rtgps.BatteryStatusService" />
+    <service android:name="com.macchinito.rtgps.RoutineService" />
+    <service android:name="com.macchinito.rtgps.GcmIntentService" />
+<!--
+    <service
+        android:name="com.macchinito.rtgps.MyGcmListenerService"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+      </intent-filter>
+    </service>
+-->
+    
+  </application>
+  
+</manifest>

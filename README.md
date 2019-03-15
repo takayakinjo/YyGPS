@@ -1,2 +1,2 @@
-# YyGPS
-YuuyaGPS based on RyutoGPS3
+# RtGPS3
+android GPS tracker application specialized for RT, android studio version
