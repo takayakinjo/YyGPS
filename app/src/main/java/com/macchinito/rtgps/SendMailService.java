@@ -32,21 +32,21 @@ public class SendMailService extends Service
 	if (mailInfo.To != null) {
 	    // send mail
 	    if (mailInfo.ryutoMessage == null) {
-		mailInfo.Subject = "RtGPS Location Service";
+		mailInfo.Subject = "YyGPS Location Service";
 		mailInfo.html = false;
 	    } else {
 		mailInfo.Subject = mailInfo.ryutoMessage;
 		mailInfo.html = true;
 	    }
 
-	    String linkString = "http://www.macchinito.com/rtgps/index.php?msg&lat=" + 
+	    String linkString = "http://www.macchinito.com/yygps/index.php?msg&lat=" +
 		String.valueOf(locInfo.latitude) + "&lng=" + 
 		String.valueOf(locInfo.longitude);
 	    
 	    mailInfo.htmlString = "<html><body>" +
-		"RtGPSmessage:<br/>" +
+		"YyGPSmessage:<br/>" +
 		mailInfo.ryutoMessage + "<br/>" +
-		"RtGPSmessage end<p/>" +
+		"YyGPSmessage end<p/>" +
 		"<a href='"+linkString+"'>"+ "[Reply Message]" + "</a><p/>" +
 		"--- <br/> RtGPS Message System <br/>" +
 		"</body></html>";

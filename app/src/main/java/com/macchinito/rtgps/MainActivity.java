@@ -110,90 +110,12 @@ public class MainActivity extends Activity {
 				});}
 		},0,1000);
 
-		ImageButton buttonSMS1 = (ImageButton)findViewById(id.sms1);
-		buttonSMS1.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				int with = 0;
-				// jump to another package
-		    /*
-		    PackageManager packageManager = getPackageManager();
-		    Intent intentActivity = packageManager.getLaunchIntentForPackage("com.macchinito.rtsms");
-		    intentActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		    intentActivity.putExtra("with", with);
-		    context.startActivity(intentActivity);
-		    */
-
-				Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-				smsIntent.setType("vnd.android-dir/mms-sms");
-				smsIntent.putExtra("address", "09041781684");
-				// smsIntent.putExtra("sms_body","Body of Message");
-				startActivity(smsIntent);
-
-/*
-				Intent intentActivity = new Intent();
-				intentActivity.setAction(Intent.ACTION_VIEW);
-				intentActivity.setClassName("com.macchinito.rtsms", "com.macchinito.rtsms.BalloonMessageActivity");
-				intentActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				intentActivity.putExtra("with", with);
-				//startActivity(intentActivity);
-				try {
-					startActivity(intentActivity);
-				} catch (Exception e) {
-					Toast.makeText(context, "対象のアプリがありません", Toast.LENGTH_SHORT).show();
-				}
-*/
-			}
-		});
-
-		ImageButton buttonSMS2 = (ImageButton)findViewById(id.sms2);
-		buttonSMS2.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-				smsIntent.setType("vnd.android-dir/mms-sms");
-				smsIntent.putExtra("address", "09018083349");
-				startActivity(smsIntent);
-				/*
-				int with = 1;
-				Intent intentActivity = new Intent();
-				intentActivity.setAction(Intent.ACTION_VIEW);
-				intentActivity.setClassName("com.macchinito.rtsms", "com.macchinito.rtsms.BalloonMessageActivity");
-				intentActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				intentActivity.putExtra("with", with);
-				//startActivity(intentActivity);
-				try {
-					startActivity(intentActivity);
-				} catch (Exception e) {
-					Toast.makeText(context, "対象のアプリがありません", Toast.LENGTH_SHORT).show();
-				}
-				*/
-			}
-		});
-
-
-		ImageButton buttonSkype = (ImageButton)findViewById(id.skype);
-		buttonSkype.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				// jump to another package
-				PackageManager packageManager = getPackageManager();
-
-				try {
-					Intent intentActivity = packageManager.getLaunchIntentForPackage("com.skype.raider");
-					intentActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					context.startActivity(intentActivity);
-				} catch (Exception e) {
-					Toast.makeText(context, "対象のアプリがありません", Toast.LENGTH_SHORT).show();
-				}
-			}
-		});
-
 
 		ImageButton led_button = (ImageButton) findViewById(id.led_button);
 		led_button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				registerInBackground();
 				if (!ledOn) {
 					ledOnOff(true);
 				} else {

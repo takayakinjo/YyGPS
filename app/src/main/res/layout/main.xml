@@ -4,7 +4,7 @@
 	      android:orientation="vertical"
 	      android:layout_width="match_parent"
 	      android:layout_height="match_parent"
-	      android:background="@drawable/ryutron1"
+	      android:background="@drawable/yygps_back"
 	      android:gravity="bottom"
 	      >
 
@@ -38,7 +38,7 @@
      android:layout_height="wrap_content"
      android:orientation="horizontal"
      android:layout_marginTop="5dp" >
-     
+<!--
     <ImageButton android:id="@+id/sms1"
 		 android:layout_width="80dp"
 		 android:layout_height="80dp"
@@ -58,7 +58,7 @@
 		 android:layout_margin="0px"
 		 android:background="#00000000"
 		 android:src="@drawable/papamail" />
-    
+
     <ImageButton android:id="@+id/skype"
 		 android:layout_width="80dp"
 		 android:layout_height="80dp"
@@ -68,7 +68,7 @@
 		 android:layout_margin="0px"
 		 android:background="#00000000"
 		 android:src="@drawable/skype" />
-    
+    -->
     <ImageButton android:id="@+id/led_button"
 		 android:layout_width="80dp"
 		 android:layout_height="80dp"

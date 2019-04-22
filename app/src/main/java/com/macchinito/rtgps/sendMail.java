@@ -29,7 +29,7 @@ public class sendMail {
     //final static String SENDER_PASSWD = "kako101303614";
     //final static String SMTP_HOST = "smtp.gmail.com";
 
-    final static String SENDER_MAIL = "whereisryuto@macchinito.com";
+    final static String SENDER_MAIL = "whereisyuuya@macchinito.com";
     final static String SENDER_PASSWD = "kako101303614";
     final static String SMTP_HOST = "macchinito.com";
 
@@ -105,11 +105,11 @@ public class sendMail {
 
 	} catch (AddressException e) {
 	    e.printStackTrace();
-	    Log.v("RTGPS", "*ADDRESSEXCEPTION");
+	    Log.v("YYGPS", "*ADDRESSEXCEPTION");
 	    result = false;
 	} catch (MessagingException e) {
 	    e.printStackTrace();
-	    Log.v("RTGPS", "*MESSAGINGEXCEPTION");
+	    Log.v("YYGPS", "*MESSAGINGEXCEPTION");
 	    result = false;
 	}
 	return result;

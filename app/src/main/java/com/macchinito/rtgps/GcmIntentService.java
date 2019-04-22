@@ -18,6 +18,7 @@ package com.macchinito.rtgps;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import android.app.IntentService;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -54,7 +55,9 @@ public class GcmIntentService extends IntentService {
         Bundle extras = intent.getExtras();
 
 	Context context = getBaseContext();
-	
+
+		Log.v(TAG, "GcmIntentOnHandle");
+
         // get GCM message from intent
         GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
         String messageType = gcm.getMessageType(intent);
@@ -74,6 +77,8 @@ public class GcmIntentService extends IntentService {
 
 		String message = extras.getString("message");
 
+		Log.v(TAG, message);
+
 		if(message.equals("rtgpsCom_getLoc")) { // get new location info
 
 		    // start BatteryStateService
@@ -90,6 +95,7 @@ public class GcmIntentService extends IntentService {
 		    AcqMode.set(true); // continuous mode
 		    Intent iLoc = new Intent(context, LocationService.class);
 		    context.startService(iLoc);
+			//context.startServiceInForeground(iLoc);
 
 		} else if(message.equals("rtgpsCom_getFuseLoc")) { // get new location info(Fuse mode)
 

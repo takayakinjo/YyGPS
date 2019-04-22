@@ -138,7 +138,7 @@ public class FuseLocationService extends Service implements
 
 	if (running) {
 	    Log.v(TAG, "Already running. ignored");
-	    return START_STICKY;
+	    //return START_STICKY;
 	    //stopService(); // stop first if already running
 	}
 	running = true;
@@ -267,6 +267,9 @@ public class FuseLocationService extends Service implements
 	Context context = getApplicationContext();
 	Intent imm = new Intent(context, SendMailService.class);
 	context.startService(imm);
+
+	// testcode
+	stopSelf();
 
     }
 
